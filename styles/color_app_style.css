@@ -1,0 +1,184 @@
+#color-app-container{
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.color-app{
+    width: 350px;
+    min-height: 350px;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px -5px rgb(0 0 0 / 50%);
+    background: var(--bg-primary);
+}
+.color-app-inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.color-palette-container{
+    width: 100%;
+    margin: 15px;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 50%);
+    background: var(--bg-primary);
+}
+.color-range-container{
+    position: relative;
+}
+.number-input-container{
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.number-input{
+    border: none;
+    width: 100%;
+    height: 25px;
+    padding-right: 55px;
+    padding-left: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 100;
+    text-align: center;
+    box-shadow: inset #ccc 0 0 0 1px, inset #fff 0 0 0 100px;
+}
+.number-input-buttons{
+    width: 49px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    box-shadow: #ccc -1px 0;
+    height: calc(100% - 2px);
+}
+.number-input-buttons span{
+    position: absolute;
+    top: 0;
+    height: 23px;
+    width: 24px;
+    font-size: 15px;
+    color: #333;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.number-input-buttons span:first-child{
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: #ccc -1px 0;
+}
+.number-input-buttons span:last-child{
+    right: 25px;
+}
+.number-input-buttons span:first-child:after{
+    content: "\2012";
+}
+.number-input-buttons span:last-child:after{
+    content: "\002B";
+}
+.number-input:not(:focus)~.number-input-buttons span:not(.is-disabled):hover{
+    box-shadow: #b1b0b5 0 0 0 1px;
+}
+.number-input:not(:focus):hover{
+    box-shadow: inset #b1b0b5 0 0 0 1px,inset #fff 0 0 0 100px;
+}
+.number-input-buttons span.is-disabled{
+    cursor: default;
+    color: #ccc;
+}
+.color-range-label{
+    color: var(--text-primary);
+}
+.color-slider{
+    height: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 100%;
+    -webkit-appearance: none;
+}
+.color-slider[name="red"]{
+    background: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(128, 0, 0), rgb(255, 0, 0));
+}
+.color-slider[name="green"]{
+    background: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(0, 128, 0), rgb(0, 255, 0));
+}
+.color-slider[name="blue"]{
+    background: -webkit-linear-gradient(left, rgb(0, 0, 0), rgb(0, 0, 128), rgb(0, 0, 255));
+}
+.color-slider:focus{
+    outline: none;
+}
+.color-slider::-webkit-slider-thumb{
+    border: 1px solid #333;
+    height: 30px;
+    width: 20px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+.css-rgb-text{
+    color: var(--text-primary);
+}
+.color-palette-container{
+    display: flex;
+}
+.preview-color{
+    background: rgb(0, 0, 0); 
+}
+.preview-color, .palette-color{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.save-color{
+    width: 33%;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    border: 1px #aaa solid;
+    cursor: pointer;
+}
+.random-color-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.random-color-title{
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 5%;
+    color: white;
+    text-shadow: 1px 0px 0px #000, 0px 1px 0px #000, -1px 0px 0px #000, 0px -1px 0px #000;
+}
+.random-color-button{
+    font-weight: 800;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+}

@@ -1,0 +1,90 @@
+#contact-module-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+.contact-module-inner{
+    position: relative;
+    height: 400px;
+    width: 600px;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -5px rgb(0 0 0 / 50%);
+}
+.contact-module-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: 500ms;
+}
+.contact-module-close:hover{
+    transform: rotate(180deg);
+}
+.contact-module-title{
+    font-weight: 900;
+    text-align: center;
+    color: var(--text-primary);
+}
+.contact-module-form{
+    width: 90%;
+    height: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-module-input{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    background: var(--bg-primary);
+    border-bottom: 3px var(--bg-secondary) solid;
+    transition: var(--transition-speed);
+    font-size: 1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+.contact-module-input::placeholder, .contact-module-textarea::placeholder{
+    font-weight: 100;
+    color: #ccc; 
+}
+.contact-module-textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    background: var(--bg-primary);
+    border-bottom: 3px var(--bg-secondary) solid;
+    transition: var(--transition-speed);
+    font-size: 1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    color: var(--text-primary);
+}
+.contact-module-button{
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    width: 50%;
+    height: 45px;
+    background: var(--icon-color);
+    color: #fff;
+    font-weight:normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.contact-module-error-message{
+    color: #D61A3C;
+    font-size: 12px;
+    text-align: center;
+}
