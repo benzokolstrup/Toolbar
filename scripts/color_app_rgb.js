@@ -1,19 +1,9 @@
 // Number input
 
-/*const inputRangeCursor = document.querySelector('.input-range_cursor');
-const addValue = document.querySelector(".number-input-buttons .add");
-const deductValue = document.querySelector(".number-input-buttons .deduct");
-let colorValueInput = document.querySelector(".number-input");
-let redValue = 0;
 
 
-let inputColorRange = document.querySelector(".color-slider");
-let closestInput = inputColorRange.closest(".color-range-container");
-let yeet = closestInput.querySelector(".number-input-container .number-input");
 
-inputColorRange.style.background = "linear-gradient(45deg, #000, #ff0000)"
-
-
+/*
 
 
 
@@ -116,10 +106,8 @@ inputColorRange.style.background = "linear-gradient(45deg, #000, #ff0000)"
 
 
 
-
-
-
-
+        
+    
 
 
 
@@ -211,7 +199,18 @@ inputColorRange.style.background = "linear-gradient(45deg, #000, #ff0000)"
                 colorPaletteContainer.prepend(newColor);
         });
 
-
+        const inputRangeCursor = document.querySelector('.input-range_cursor');
+        const deductValue = document.querySelectorAll(".number-input-buttons .deduct");
+    
+    
+    
+        const addValue = document.querySelectorAll(".number-input-buttons .add");
+            for(let i = 0; i < addValue.length; i++){
+                addValue[i].addEventListener('click', incrementValue);
+            }
+            function incrementValue(e){
+                console.log(e.target.closest('.number-input-container').querySelector('.number-input').value);
+            }
 
 
 
