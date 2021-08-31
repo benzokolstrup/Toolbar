@@ -56,9 +56,6 @@ function activateCalculator(){
         if(displayValue.length == 0){
             displayValue.push('0');
         }
-        if(displayValue.length >= 13){
-            displayValue.pop();
-        }
         console.log(displayValue);
         calcDisplay.querySelector('.display-number').textContent = displayValue.join('');
     }
