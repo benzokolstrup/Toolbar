@@ -6,14 +6,14 @@ html[data-theme="light"]{
     --bg-secondary: rgb(245, 245, 245);
     --text-primary: #222425;
     --transition-speed: 200ms ease;
-    --icon-color: linear-gradient(45deg, #0c3c58 0%, #80d0c7 100%);
+    --icon-color: linear-gradient(45deg, #883fc9 15%, #6bb8d4 100%);
 }
 html[data-theme="dark"]{
     --bg-primary: #23232e;
     --bg-secondary: #141418;
     --text-primary: #fcfcfc;
     --transition-speed: 200ms ease;
-    --icon-color: linear-gradient(45deg, #0c3c58 0%, #80d0c7 100%);
+    --icon-color: linear-gradient(45deg, #883fc9 15%, #6bb8d4 100%);
 }
 
 
