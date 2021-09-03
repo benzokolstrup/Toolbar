@@ -15,6 +15,8 @@ function initTool(tool){
                 activateCalculator();
             }else{
                 calcWrapper.classList.add('hidden');
+                calcWrapper.style.top = 50 + '%';
+                calcWrapper.style.left = 50 + '%';
                 calcToolActive = false;
             }
             break;

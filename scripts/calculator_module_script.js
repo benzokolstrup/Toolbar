@@ -108,34 +108,5 @@ function activateCalculator(){
                 break;
         }
     }
-    function dragElement(element) {
-        let pos1,
-            pos2,
-            pos3,
-            pos4;
-        element.addEventListener('mousedown', dragMouseDown);
-        function dragMouseDown(e) {
-            if(e.target.classList.contains('button')) return;
-            e = window.event;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            document.addEventListener('mouseup', stopDragElement);
-            document.addEventListener('mousemove', startDragElement);
-        }
-        function startDragElement(e) {
-            e = window.event;
-            pos1 = pos3 - e.clientX;
-            pos2 = pos4 - e.clientY;
-            pos3 = e.clientX;
-            pos4 = e.clientY;
-            element.style.top = (element.offsetTop - pos2) + 'px';
-            element.style.left = (element.offsetLeft - pos1) + 'px';
-        }
-        function stopDragElement() {
-            document.removeEventListener('mouseup', stopDragElement);
-            document.removeEventListener('mousemove', startDragElement);
-        }
-    }
-    dragElement(calcWrapper);
     updateDisplay();
 }
