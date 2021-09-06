@@ -4,8 +4,8 @@ window.addEventListener('mousedown', (e) => {
     }
 });
 function dragElement(element, heightPos, widthPos){
-    document.addEventListener('mousemove', startDragElement);
-    document.addEventListener('mouseup', stopDragElement);
+    window.addEventListener('mousemove', startDragElement);
+    window.addEventListener('mouseup', stopDragElement);
     let elementTopPos = heightPos - element.offsetTop;
     let elementLeftPos = widthPos - element.offsetLeft;
     function startDragElement(e){
@@ -13,6 +13,6 @@ function dragElement(element, heightPos, widthPos){
         element.style.left = (e.clientX - elementLeftPos) + 'px';
     };
     function stopDragElement(){
-        document.removeEventListener('mousemove', startDragElement);
+        window.removeEventListener('mousemove', startDragElement);
     };
 }

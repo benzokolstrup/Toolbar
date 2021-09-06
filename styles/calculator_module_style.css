@@ -59,7 +59,6 @@
     background: var(--icon-color);
     color: #fcfcfc;
     filter: grayscale(100%) opacity(0.7);
-    transition: 200ms;
 }
 #calculator-module .button.function-button:hover{
     filter: grayscale(0%);

@@ -4,24 +4,53 @@ toolButtons.forEach( tool => {
         initTool(e.target.closest('.tool').getAttribute('data-tool'));
     });
 });
-let calcToolActive = false;
+let ToolbarActive = false;
+let calcModuleActive = false;
+let weatherModuleActive = false;
+let gameModuleActive = false;
 function initTool(tool){
     switch (tool) {
+        case 'logo':
+            const logo = document.querySelector('.navbar');
+            if(!ToolbarActive){
+                logo.style.height = '95vh';
+                ToolbarActive = true;
+            }else{
+                logo.style.height = '9.3vh';
+                ToolbarActive = false;
+            }
+            break;
         case 'calculator':
             const calcWrapper = document.querySelector('#calculator-module-wrapper');
-            if(!calcToolActive){
+            if(!calcModuleActive){
                 calcWrapper.classList.remove('hidden');
-                calcToolActive = true;
+                calcModuleActive = true;
                 activateCalculator();
             }else{
                 calcWrapper.classList.add('hidden');
-                calcWrapper.style.top = 50 + '%';
-                calcWrapper.style.left = 50 + '%';
-                calcToolActive = false;
+                calcModuleActive = false;
             }
             break;
         case 'weather':
-            console.log(tool);
+            const weatherWrapper = document.querySelector('#weather-module-wrapper');
+            if(!weatherModuleActive){
+                weatherWrapper.classList.remove('hidden');
+                weatherModuleActive = true;
+                initWeatherModule();
+            }else{
+                weatherWrapper.classList.add('hidden');
+                weatherModuleActive = false;
+            }
+            break;
+        case 'game':
+            const gameWrapper = document.querySelector('#draganddrop-module-wrapper');
+            if(!gameModuleActive){
+                gameWrapper.classList.remove('hidden');
+                gameModuleActive = true;
+            }else{
+                gameWrapper.classList.add('hidden');
+                gameModuleActive = false;
+            }
             break;
     }
 }

@@ -1,0 +1,61 @@
+.drag-box.dragable{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+}
+.drag-box.dragable:nth-of-type(odd){
+    top: 100px;
+}
+.drag-box.dragable:nth-of-type(even){
+    top: 200px;
+}
+.drag-box.dragable:nth-of-type(1){
+    left: 300px;
+    background-color: green;
+}
+.drag-box.dragable:nth-of-type(2){
+    left: 400px;
+    background-color: red;
+}
+.drag-box.dragable:nth-of-type(3){
+    left: 500px;
+    background-color:cadetblue
+}
+.drag-box.dragable:nth-of-type(4){
+    left: 600px;
+    background-color: purple;
+}
+.drag-box.dragable:nth-of-type(5){
+    left: 700px;
+    background-color: blue;
+}
+.drag-box.dragable:nth-of-type(6){
+    left: 300px;
+    background-color: #F7C39B;
+}
+.drag-box.dragable:nth-of-type(7){
+    left: 400px;
+    background-color: #A3370D;
+}
+.drag-box.dragable:nth-of-type(8){
+    left: 500px;
+    background-color:#5DEE3F;
+}
+.drag-box.dragable:nth-of-type(9){
+    left: 600px;
+    background-color: #1A410C;
+}
+.drag-box.dragable:nth-of-type(10){
+    left: 700px;
+    background-color: #27C2F2;
+}
+

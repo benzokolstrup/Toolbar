@@ -1,0 +1,38 @@
+input#switch{
+	height: 0;
+	width: 0;
+    visibility: hidden;
+    cursor: pointer;
+}
+.switch-label{
+	width: 80px;
+	height: 30px;
+	background: #333;
+	display: block;
+	border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+}
+.switch-label:after{
+    content: "";
+    height: 16px;
+    width: 16px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    padding: 4px;
+    background: #fff;
+    border-radius: 90px;
+    transition: var(--transition-speed);
+    color: #333;
+}
+input#switch:checked, .switch-label{
+	background: #333;
+    cursor: pointer;
+}
+input#switch:checked + .switch-label:after{
+	left: calc(100% - 3px);
+	transform: translateX(-100%);
+}
