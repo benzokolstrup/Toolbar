@@ -1,13 +1,13 @@
 const toolButtons = document.querySelectorAll('.nav-item.tool');
+let ToolbarActive = false,
+    calcModuleActive = false,
+    weatherModuleActive = false,
+    gameModuleActive = false;
 toolButtons.forEach( tool => {
     tool.addEventListener('click', (e) => {
         initTool(e.target.closest('.tool').getAttribute('data-tool'));
     });
 });
-let ToolbarActive = false;
-let calcModuleActive = false;
-let weatherModuleActive = false;
-let gameModuleActive = false;
 function initTool(tool){
     switch (tool) {
         case 'logo':
