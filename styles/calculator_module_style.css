@@ -4,12 +4,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: var(--border-radius-primary);
-    background: var(--background-color-secondary);
-    box-shadow: var(--box-shadow-primary);
 }
 #calculator-module{
     padding: 10px;
+    height: 285px;
+    border-radius: var(--border-radius-primary);
+    background: var(--background-color-secondary);
+    box-shadow: var(--box-shadow-primary);
+    transition: 200ms linear;
+    overflow: hidden;
 }
 #calculator-module .display{
     width: 100%;

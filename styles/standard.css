@@ -1,6 +1,6 @@
 :root{
     font-size: 16px;
-    --transition-speed: 200ms linear;
+    --transition-speed: 150ms linear;
     --icon-color-primary: linear-gradient(45deg, #f64f59 0%, #c471ed 50%, #12c2e9 100%);
     --box-shadow-primary: 5px 5px 7px 0px rgba(0,0,0,0.3);
     --border-radius-primary: 10px;
@@ -35,6 +35,9 @@ body::-webkit-scrollbar-thumb{
 }
 .hidden{
     display: none;
+}
+div[id$="module"].minimized{
+    height: 70px;
 }
 .backdrop{
     position: absolute;
@@ -116,6 +119,23 @@ i.fas{
 }
 .switch-container{
     display: none;
+}
+.module-functions-wrapper{
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.module-function-button{
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 @media (min-width: 769px){
     .navbar{

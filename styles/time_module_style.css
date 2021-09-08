@@ -1,0 +1,28 @@
+#time-module-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#time-module{
+    width: 250px;
+    height: 80px;
+    position: relative;
+    padding: 10px;
+    border-radius: var(--border-radius-primary);
+    background-color: var(--background-color-secondary);
+    box-shadow: var(--box-shadow-primary);
+}
+#time-module .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-primary);
+    background-color: var(--background-color-primary);
+}
+#time-module .digital-clock{
+    font-family: 'Space mono';
+    font-size: 44px;
+    color: var(--font-color-primary);
+}

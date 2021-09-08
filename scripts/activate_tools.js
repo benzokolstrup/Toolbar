@@ -1,11 +1,28 @@
 const toolButtons = document.querySelectorAll('.nav-item.tool');
+const closeButtons = document.querySelectorAll('.module-function-button.close');
+const miniButtons = document.querySelectorAll('.module-function-button.minimize');
 let ToolbarActive = false,
     calcModuleActive = false,
     weatherModuleActive = false,
-    gameModuleActive = false;
+    gameModuleActive = false,
+    timeModuleActive = false;
 toolButtons.forEach( tool => {
     tool.addEventListener('click', (e) => {
         initTool(e.target.closest('.tool').getAttribute('data-tool'));
+    });
+});
+closeButtons.forEach( closeButton => {
+    closeButton.addEventListener('click', (e) => {
+        initTool(e.target.closest('[data-module]').getAttribute('data-module'));
+    });
+});
+miniButtons.forEach( miniButton => {
+    miniButton.addEventListener('click', (e) => {
+        if(!e.target.closest('[data-module]').querySelector('div[id$="module"]').getAttribute('style')){
+            e.target.closest('[data-module]').querySelector('div[id$="module"]').style.height = '70px';
+        }else{
+            e.target.closest('[data-module]').querySelector('div[id$="module"]').removeAttribute('style');
+        }
     });
 });
 function initTool(tool){
@@ -50,6 +67,17 @@ function initTool(tool){
             }else{
                 gameWrapper.classList.add('hidden');
                 gameModuleActive = false;
+            }
+            break;
+        case 'clock':
+            const timeWrapper = document.querySelector('#time-module-wrapper');
+            if(!timeModuleActive){
+                timeWrapper.classList.remove('hidden');
+                timeModuleActive = true;
+                initTimeModule();
+            }else{
+                timeWrapper.classList.add('hidden');
+                timeModuleActive = false;
             }
             break;
     }
