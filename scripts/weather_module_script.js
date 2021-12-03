@@ -29,7 +29,6 @@ function initWeatherModule(){
                         errorContainer.classList.remove('hidden');
                         return;
                     }
-                    
                     title.textContent = `${data['name']}, ${data['sys']['country']}`;
                     temperature.textContent = `${data['main']['temp'].toFixed(1)}˚c`;
                     description.textContent = `${data['weather'][0]['main']}`;
